@@ -25,7 +25,7 @@ Jeśli masz problemy z zainstalowaniem numpy możesz poszukać rozwiązania tuta
     
     Zaobserwuj jak sieć zachowuje się przy zmianach tych parametrów.
     Drugi argument to liczba epok, przez które sieć będzie się uczyła. Jeśli chcesz możesz go zmienić, ale 5 epok jest optymalnym rozwiązaniem, zdążysz zauważyć generalną efektywność sieci nie tracąc przy tym zbyt dużo czasu.   
-    ***Przy zmienianiu parametrów nie musisz robić tego bardzo skrupulatnie - sprawdź kiedy dany parametr jest zdecydowanie zbyt duży lub zbyt mały "psując" sieć (poprawność sieci zdecydowanie poniżej 90%). Zapisz swoje wnioski (bardzo ogólne, powinieneś się zmieścić w mniej niż 10 zdaniach) na temat tego jak zmiana liczby neuronów, parametru uczenia się i rozmiaru pojedynczej 'porcji danych' wpływa na działanie sieci.*** 
+    ***Przy zmienianiu parametrów nie musisz robić tego bardzo skrupulatnie - sprawdź kiedy dany parametr jest zdecydowanie zbyt duży lub zbyt mały "psując" sieć (poprawność sieci zdecydowanie poniżej 90%). Zapisz swoje wnioski (bardzo ogólne, powinieneś się zmieścić w mniej niż 10 zdaniach) na temat tego jak zmiana liczby neuronów, parametru uczenia się i rozmiaru pojedynczej 'porcji danych' wpływa na działanie sieci.***  
     Jeśli chcesz możesz poszukać optymalnych parametrów sieci, dla których osiągnie ona skuteczność ~95% (dla tej dosyć prostej sieci osiągnięcie wyższych wyników jest raczej niemożliwe). Do osiągnięcia takiego wyniku będziesz prawdopodobnie potrzebował  więcej niż 5 epok. 
     > ***Uwaga***: Wagi i progi w sieci są inicjalizowane losowo - z tego powodu dla tych samych parametrów sieci może się okazać, że dla różnych podejść uzyskasz zupełnie inne wyniki (w pierwszych epokach może być to różnica nawet kilku punktów procentowych).
 
