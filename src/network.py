@@ -112,7 +112,7 @@ class Network(object):
             delta = np.dot(self.weights[-l + 1].transpose(), delta) * sp
             nabla_b[-l] = delta
             nabla_w[-l] = np.dot(delta, activations[-l - 1].transpose())
-        return (nabla_b, nabla_w)
+        return nabla_b, nabla_w
 
     def evaluate(self, test_data):
         """Metoda zwraca liczbę przypadków testowych, w których sieć neuronowa
@@ -125,12 +125,11 @@ class Network(object):
 
     def network_result(self, test_data):
         """Zwraca wynik sieci"""
-        test_results = [np.argmax(self.feedforward(x)) for (x, y) in test_data]
-        return test_results
+        # Uzupełnij tę metodę
 
     def cost_derivative(self, output_activations, y):
         """Metoda zwracająca pochodną funkcji kosztu."""
-        return (output_activations - y)
+        return output_activations - y
 
     def save(self, filename):
         """Zapisz parametry sieci do pliku `filename`."""

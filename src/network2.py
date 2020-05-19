@@ -75,10 +75,9 @@ class Network(object):
         o wartości średniej 0 oraz odchyleniu standardowym 1.
         """
         self.biases = [np.random.randn(y, 1) for y in self.sizes[1:]]
-        """uzupełnij linijkę niżej, żeby znormalizować odchylenie standardowe przy incjalizowaniu wag za pomocą 
+        """uzupełnij linijkę niżej, żeby znormalizować odchylenie standardowe przy inicjalizowaniu wag za pomocą 
         liczby wag wchodzących do danego neuronu."""
-        self.weights = [np.random.randn(y, x) / np.sqrt(x)
-                        for x, y in zip(self.sizes[:-1], self.sizes[1:])]
+        self.weights = [np.random.randn(y, x) for x, y in zip(self.sizes[:-1], self.sizes[1:])]
 
     def large_weight_initializer(self):
         """Metoda inicjalizująca wagi oraz progi dokładnie w ten sam sposób
@@ -87,8 +86,7 @@ class Network(object):
         wag.
         """
         self.biases = [np.random.randn(y, 1) for y in self.sizes[1:]]
-        self.weights = [np.random.randn(y, x)
-                        for x, y in zip(self.sizes[:-1], self.sizes[1:])]
+        self.weights = [np.random.randn(y, x) for x, y in zip(self.sizes[:-1], self.sizes[1:])]
 
     def feedforward(self, a):
         """Metoda zwracająca wynik sieci neuronowej, gdzie 'a' to dane wejściowe"""
